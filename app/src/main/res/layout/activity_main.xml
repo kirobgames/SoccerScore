@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/field"
+    tools:context="com.example.android.soccerscore.MainActivity">
+
+    <!-- BEFORE SCORE COUNT-->
+    <EditText
+        android:id="@+id/team_Left_Name_Edit_Text"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/team_left_text"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/editName"
+        android:inputType="textPersonName"
+        android:maxLength="12"
+        android:padding="@dimen/edit_text_padding"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/team_Right_Name_Edit_Text"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_team_right_margin_top"
+        android:background="@drawable/team_right_text"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/editName"
+        android:inputType="textPersonName"
+        android:maxLength="12"
+        android:padding="@dimen/edit_text_padding"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_Left_Name_Edit_Text" />
+
+    <Button
+        android:id="@+id/start_Score_Count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/start_button_margin_top"
+        android:background="@drawable/simple_button"
+        android:onClick="startScoreCount"
+        android:padding="@dimen/start_button_padding"
+        android:text="@string/start_score_count"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="@+id/team_Right_Name_Edit_Text"
+        app:layout_constraintRight_toRightOf="@+id/team_Right_Name_Edit_Text"
+        app:layout_constraintTop_toBottomOf="@+id/team_Right_Name_Edit_Text" />
+
+
+    <!-- IN SCORE COUNT-->
+    <!-- HALF -->
+    <TextView
+        android:id="@+id/playedHalf"
+        style="@style/Half"
+        android:text="@string/first_half"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TEAM NAME -->
+    <TextView
+        android:id="@+id/team_Left_Name_Text"
+        style="@style/LeftTeamName"
+        android:background="@drawable/team_left_text"
+        android:text="@string/team_a"
+        android:visibility="invisible"
+        app:layout_constraintRight_toLeftOf="@+id/team_Text"
+        app:layout_constraintTop_toBottomOf="@+id/playedHalf" />
+
+    <TextView
+        android:id="@+id/team_Text"
+        style="@style/Team"
+        android:text="@string/team"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/team_Left_Name_Text"
+        app:layout_constraintLeft_toLeftOf="@+id/playedHalf"
+        app:layout_constraintRight_toRightOf="@+id/playedHalf"
+        app:layout_constraintTop_toBottomOf="@+id/playedHalf"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/team_Right_Name_Text"
+        style="@style/RightTeamName"
+        android:background="@drawable/team_right_text"
+        android:text="@string/team_b"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toRightOf="@+id/team_Text"
+        app:layout_constraintTop_toBottomOf="@+id/playedHalf" />
+
+    <!-- TEAM GOALS -->
+    <TextView
+        android:id="@+id/goal_Team_Left"
+        style="@style/LeftTeamText"
+        android:background="@drawable/team_left_text"
+        android:text="@string/zero"
+        android:visibility="invisible"
+        app:layout_constraintRight_toLeftOf="@+id/goal_Text"
+        app:layout_constraintTop_toBottomOf="@+id/team_Text" />
+
+    <TextView
+        android:id="@+id/goal_Text"
+        style="@style/SimpleText"
+        android:text="@string/goal_text"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/goal_Team_Left"
+        app:layout_constraintLeft_toLeftOf="@+id/team_Text"
+        app:layout_constraintRight_toRightOf="@+id/team_Text"
+        app:layout_constraintTop_toBottomOf="@+id/team_Text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/goal_Team_Right"
+        style="@style/RightTeamText"
+        android:background="@drawable/team_right_text"
+        android:text="@string/zero"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toRightOf="@+id/goal_Text"
+        app:layout_constraintTop_toBottomOf="@+id/team_Text" />
+
+    <!-- PENALTY -->
+    <TextView
+        android:id="@+id/penalty_Team_Left"
+        style="@style/LeftTeamText"
+        android:background="@drawable/team_left_text"
+        android:text="@string/zero"
+        android:visibility="invisible"
+        app:layout_constraintRight_toLeftOf="@+id/penalty_Text"
+        app:layout_constraintTop_toBottomOf="@+id/goal_Text" />
+
+    <TextView
+        android:id="@+id/penalty_Text"
+        style="@style/SimpleText"
+        android:text="@string/penalty_text"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/penalty_Team_Left"
+        app:layout_constraintLeft_toLeftOf="@+id/goal_Text"
+        app:layout_constraintRight_toRightOf="@+id/goal_Text"
+        app:layout_constraintTop_toBottomOf="@+id/goal_Text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/penalty_Team_Right"
+        style="@style/RightTeamText"
+        android:background="@drawable/team_right_text"
+        android:text="@string/zero"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toRightOf="@+id/penalty_Text"
+        app:layout_constraintTop_toBottomOf="@+id/goal_Text" />
+
+    <!-- Corner-kick -->
+    <TextView
+        android:id="@+id/corner_Kick_Team_Left"
+        style="@style/LeftTeamText"
+        android:background="@drawable/team_left_text"
+        android:text="@string/zero"
+        android:visibility="invisible"
+        app:layout_constraintRight_toLeftOf="@+id/corner_Kick_Text"
+        app:layout_constraintTop_toBottomOf="@+id/penalty_Text" />
+
+    <TextView
+        android:id="@+id/corner_Kick_Text"
+        style="@style/SimpleText"
+        android:text="@string/corner_kick_text"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/corner_Kick_Team_Left"
+        app:layout_constraintLeft_toLeftOf="@+id/penalty_Text"
+        app:layout_constraintRight_toRightOf="@+id/penalty_Text"
+        app:layout_constraintTop_toBottomOf="@+id/penalty_Text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/corner_Kick_Team_Right"
+        style="@style/RightTeamText"
+        android:background="@drawable/team_right_text"
+        android:text="@string/zero"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toRightOf="@+id/corner_Kick_Text"
+        app:layout_constraintTop_toBottomOf="@+id/penalty_Text" />
+
+    <!-- Tap To Increase -->
+    <TextView
+        android:id="@+id/tap_Text"
+        style="@style/TapText"
+        android:layout_width="wrap_content"
+        android:text="@string/tap_value"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/corner_Kick_Team_Left"
+        app:layout_constraintRight_toRightOf="@+id/corner_Kick_Team_Right"
+        app:layout_constraintTop_toBottomOf="@+id/corner_Kick_Text" />
+
+    <!-- Free - Kick -->
+    <Button
+        android:id="@+id/fouls_Team_Left"
+        style="@style/LeftTeamSmallButton"
+        android:background="@drawable/left_team_button"
+        android:onClick="leftFouls"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/tap_Text"
+        app:layout_constraintTop_toBottomOf="@+id/tap_Text"/>
+
+    <Button
+        android:id="@+id/fouls_Team_Right"
+        style="@style/RightTeamSmallButton"
+        android:background="@drawable/right_team_button"
+        android:onClick="rightFouls"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="@+id/tap_Text"
+        app:layout_constraintTop_toBottomOf="@+id/tap_Text"/>
+
+    <TextView
+        android:id="@+id/fouls_Text"
+        style="@style/SimpleText"
+        android:text="@string/fouls"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/fouls_Team_Left"
+        app:layout_constraintLeft_toRightOf="@+id/fouls_Team_Left"
+        app:layout_constraintRight_toLeftOf="@+id/fouls_Team_Right"
+        app:layout_constraintTop_toBottomOf="@+id/tap_Text" />
+
+    <!-- Throw-in -->
+    <Button
+        android:id="@+id/throw_In_Team_Left"
+        style="@style/LeftTeamSmallButton"
+        android:background="@drawable/left_team_button"
+        android:onClick="leftThrowIn"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/tap_Text"
+        app:layout_constraintTop_toBottomOf="@+id/fouls_Text"/>
+
+    <Button
+        android:id="@+id/throw_In_Team_Right"
+        style="@style/RightTeamSmallButton"
+        android:background="@drawable/right_team_button"
+        android:onClick="rightThrowIn"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="@+id/tap_Text"
+        app:layout_constraintTop_toBottomOf="@+id/fouls_Text"/>
+
+    <TextView
+        android:id="@+id/throw_In_Text"
+        style="@style/SimpleText"
+        android:text="@string/throw_in"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/throw_In_Team_Left"
+        app:layout_constraintLeft_toRightOf="@+id/throw_In_Team_Left"
+        app:layout_constraintRight_toLeftOf="@+id/throw_In_Team_Right"
+        app:layout_constraintTop_toBottomOf="@+id/fouls_Text" />
+
+    <!-- Yellow card -->
+    <Button
+        android:id="@+id/yellow_Card_Team_Left"
+        style="@style/LeftTeamSmallButton"
+        android:background="@drawable/left_team_button"
+        android:onClick="leftYellowCard"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/tap_Text"
+        app:layout_constraintTop_toBottomOf="@+id/throw_In_Text"/>
+
+    <Button
+        android:id="@+id/yellow_Card_Team_Right"
+        style="@style/RightTeamSmallButton"
+        android:background="@drawable/right_team_button"
+        android:onClick="rightYellowCard"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="@+id/tap_Text"
+        app:layout_constraintTop_toBottomOf="@+id/throw_In_Text"/>
+
+    <TextView
+        android:id="@+id/yellow_Card_Text"
+        style="@style/SimpleText"
+        android:text="@string/yellow_card"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/yellow_Card_Team_Left"
+        app:layout_constraintLeft_toRightOf="@+id/yellow_Card_Team_Left"
+        app:layout_constraintRight_toLeftOf="@+id/yellow_Card_Team_Right"
+        app:layout_constraintTop_toBottomOf="@+id/throw_In_Text" />
+
+    <!-- Red card -->
+    <Button
+        android:id="@+id/red_Card_Team_Left"
+        style="@style/LeftTeamSmallButton"
+        android:background="@drawable/left_team_button"
+        android:onClick="leftRedCard"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/tap_Text"
+        app:layout_constraintTop_toBottomOf="@+id/yellow_Card_Text"/>
+
+    <Button
+        android:id="@+id/red_Card_Team_Right"
+        style="@style/RightTeamSmallButton"
+        android:background="@drawable/right_team_button"
+        android:onClick="rightRedCard"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="@+id/tap_Text"
+        app:layout_constraintTop_toBottomOf="@+id/yellow_Card_Text"/>
+
+    <TextView
+        android:id="@+id/red_Card_Text"
+        style="@style/SimpleText"
+        android:text="@string/red_card"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/red_Card_Team_Left"
+        app:layout_constraintLeft_toRightOf="@+id/red_Card_Team_Left"
+        app:layout_constraintRight_toLeftOf="@+id/red_Card_Team_Right"
+        app:layout_constraintTop_toBottomOf="@+id/yellow_Card_Text" />
+
+    <!-- Corners -->
+    <Button
+        android:id="@+id/corner_Top_Left"
+        style="@style/RightTeamCorner"
+        android:background="@drawable/right_team_button"
+        android:onClick="leftCorner"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/corner_Bottom_Left"
+        style="@style/RightTeamCorner"
+        android:background="@drawable/right_team_button"
+        android:onClick="leftCorner"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/corner_Top_Right"
+        style="@style/LeftTeamCorner"
+        android:background="@drawable/left_team_button"
+        android:onClick="rightCorner"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/corner_Bottom_Right"
+        style="@style/LeftTeamCorner"
+        android:background="@drawable/left_team_button"
+        android:onClick="rightCorner"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!-- Goals -->
+    <Button
+        android:id="@+id/goal_Left"
+        style="@style/RightTeamGoal"
+        android:background="@drawable/right_team_button"
+        android:onClick="leftGoal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/goal_Right"
+        style="@style/LeftTeamGoal"
+        android:background="@drawable/left_team_button"
+        android:onClick="rightGoal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Penalty on field-->
+    <Button
+        android:id="@+id/penalty_Left"
+        style="@style/RightTeamPenalty"
+        android:layout_marginLeft="@dimen/left_penalty_margin_left"
+        android:background="@drawable/right_team_button"
+        android:onClick="leftPenalty"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/goal_Left"
+        app:layout_constraintLeft_toRightOf="@+id/goal_Left"
+        app:layout_constraintTop_toTopOf="@+id/goal_Left"/>
+
+    <Button
+        android:id="@+id/penalty_Right"
+        style="@style/LeftTeamPenalty"
+        android:layout_marginRight="@dimen/right_penalty_margin_right"
+        android:background="@drawable/left_team_button"
+        android:onClick="rightPenalty"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/goal_Right"
+        app:layout_constraintRight_toLeftOf="@+id/goal_Right"
+        app:layout_constraintTop_toTopOf="@+id/goal_Right"/>
+
+    <!-- Reset -->
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/reset_button_margin_end"
+        android:layout_marginRight="@dimen/reset_button_margin_right"
+        android:background="@drawable/simple_button"
+        android:onClick="reset"
+        android:padding="@dimen/reset_button_padding"
+        android:text="@string/reset"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/corner_Bottom_Left"
+        app:layout_constraintLeft_toRightOf="@+id/corner_Bottom_Left"
+        app:layout_constraintRight_toLeftOf="@+id/red_Card_Team_Left"
+        app:layout_constraintTop_toTopOf="@+id/corner_Bottom_Left"/>
+
+    <!-- 2. Half -->
+    <Button
+        android:id="@+id/second_Half"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/second_half_button_margin_left"
+        android:layout_marginStart="@dimen/second_half_button_margin_start"
+        android:background="@drawable/simple_button"
+        android:onClick="startSecondHalf"
+        android:padding="@dimen/second_half_button_padding"
+        android:text="@string/second_half"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/corner_Bottom_Right"
+        app:layout_constraintLeft_toRightOf="@+id/red_Card_Team_Right"
+        app:layout_constraintRight_toLeftOf="@+id/corner_Bottom_Right"
+        app:layout_constraintTop_toTopOf="@+id/corner_Bottom_Right"/>
+
+</android.support.constraint.ConstraintLayout>
