@@ -11,48 +11,28 @@
     <!-- BEFORE SCORE COUNT-->
     <EditText
         android:id="@+id/team_Left_Name_Edit_Text"
-        android:layout_width="@dimen/edit_text_width"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/team_left_text"
+        style="@style/editTextTeamA"
         android:ems="10"
-        android:gravity="center_horizontal"
-        android:hint="@string/editName"
         android:inputType="textPersonName"
         android:maxLength="12"
-        android:padding="@dimen/edit_text_padding"
-        android:textColor="@android:color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/team_Right_Name_Edit_Text"
-        android:layout_width="@dimen/edit_text_width"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/edit_text_team_right_margin_top"
-        android:background="@drawable/team_right_text"
+        style="@style/editTextTeamB"
         android:ems="10"
-        android:gravity="center_horizontal"
-        android:hint="@string/editName"
         android:inputType="textPersonName"
         android:maxLength="12"
-        android:padding="@dimen/edit_text_padding"
-        android:textColor="@android:color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/team_Left_Name_Edit_Text" />
 
     <Button
         android:id="@+id/start_Score_Count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/start_button_margin_top"
-        android:background="@drawable/simple_button"
+        style="@style/startButton"
         android:onClick="startScoreCount"
-        android:padding="@dimen/start_button_padding"
-        android:text="@string/start_score_count"
-        android:textColor="@android:color/white"
         app:layout_constraintLeft_toLeftOf="@+id/team_Right_Name_Edit_Text"
         app:layout_constraintRight_toRightOf="@+id/team_Right_Name_Edit_Text"
         app:layout_constraintTop_toBottomOf="@+id/team_Right_Name_Edit_Text" />
@@ -357,6 +337,8 @@
     <Button
         android:id="@+id/goal_Left"
         style="@style/RightTeamGoal"
+        android:layout_marginLeft="@dimen/left_goal_margin_left"
+        android:layout_marginStart="@dimen/left_goal_margin_left"
         android:background="@drawable/right_team_button"
         android:onClick="leftGoal"
         android:visibility="invisible"
@@ -367,6 +349,8 @@
     <Button
         android:id="@+id/goal_Right"
         style="@style/LeftTeamGoal"
+        android:layout_marginEnd="@dimen/right_goal_margin_right"
+        android:layout_marginRight="@dimen/right_goal_margin_right"
         android:background="@drawable/left_team_button"
         android:onClick="rightGoal"
         android:visibility="invisible"
@@ -379,6 +363,7 @@
         android:id="@+id/penalty_Left"
         style="@style/RightTeamPenalty"
         android:layout_marginLeft="@dimen/left_penalty_margin_left"
+        android:layout_marginStart="@dimen/left_penalty_margin_left"
         android:background="@drawable/right_team_button"
         android:onClick="leftPenalty"
         android:visibility="invisible"
@@ -389,6 +374,7 @@
     <Button
         android:id="@+id/penalty_Right"
         style="@style/LeftTeamPenalty"
+        android:layout_marginEnd="@dimen/right_penalty_margin_right"
         android:layout_marginRight="@dimen/right_penalty_margin_right"
         android:background="@drawable/left_team_button"
         android:onClick="rightPenalty"

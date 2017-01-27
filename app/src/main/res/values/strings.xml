@@ -8,13 +8,16 @@
     <string name="team_b">Team B</string>
     <string name="zero">0</string>
     <string name="goal_text">Goal</string>
+    <string name="goal_text_on_button">G\no\na\nl</string>
     <string name="penalty_text">Penalty</string>
+    <string name="penalty_text_on_button">P\ne\nn\na\nl\nt\ny</string>
     <string name="corner_kick_text">Corner Kick</string>
+    <string name="corner_kick_text_on_button">Corner\nKick</string>
     <string name="tap_value">Tap Value To Increase !</string>
     <string name="fouls">Fouls</string>
     <string name="throw_in">Throw-in</string>
     <string name="yellow_card">Yellow card</string>
     <string name="red_card">Red card</string>
     <string name="reset">Reset</string>
-    <string name="second_half">II. Half</string>
+    <string name="second_half">Second Half</string>
 </resources>

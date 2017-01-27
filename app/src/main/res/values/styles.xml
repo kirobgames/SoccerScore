@@ -6,192 +6,228 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
     </style>
 
-    <!-- Simple Text -->
-
-    <style name="Half" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">140dp</item>
+    <!-- Edit Text Team A -->
+    <style name="editTextTeamA" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">@dimen/edit_text_width</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingBottom">4dp</item>
-        <item name="android:layout_marginTop">2dp</item>
-        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:background">@drawable/team_left_text</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:background">@drawable/simple_text</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:hint">@string/editName</item>
+        <item name="android:padding">@dimen/edit_text_padding</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="Team" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">140dp</item>
+    <!-- Edit Text Team b -->
+    <style name="editTextTeamB" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">@dimen/edit_text_width</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingBottom">4dp</item>
+        <item name="android:layout_marginTop">@dimen/edit_text_team_right_margin_top</item>
+        <item name="android:background">@drawable/team_right_text</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:background">@drawable/simple_text</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:hint">@string/editName</item>
+        <item name="android:padding">@dimen/edit_text_padding</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="SimpleText" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">140dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">3dp</item>
-        <item name="android:gravity">center_horizontal</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:background">@drawable/simple_text</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
-    <style name="TapText" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Start Button -->
+    <style name="startButton" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:padding">@dimen/start_button_padding</item>
+        <item name="android:layout_marginTop">@dimen/start_button_margin_top</item>
+        <item name="android:text">@string/start_score_count</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/simple_button</item>
+        <item name="android:textSize">@dimen/start_button_text_size</item>
+    </style>
+
+    <!-- Half Text -->
+    <style name="Half" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">@dimen/center_text_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/half_text_padding_bottom</item>
+        <item name="android:layout_marginTop">@dimen/half_text_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/half_text_margin_bottom</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:background">@drawable/simple_text</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/half_text_size</item>
     </style>
 
-    <!-- Left team name. -->
+    <!-- Team Text -->
+    <style name="Team" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">@dimen/center_text_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/text_team_padding_bottom</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/simple_text</item>
+        <item name="android:textSize">@dimen/text_team_size</item>
+    </style>
+
+    <!-- Left Team Name. -->
     <style name="LeftTeamName" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingLeft">@dimen/team_name_padding_left</item>
+        <item name="android:paddingRight">@dimen/team_name_padding_right</item>
+        <item name="android:paddingBottom">@dimen/team_name_padding_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/team_name_text_size</item>
     </style>
 
     <!-- Right team name. -->
     <style name="RightTeamName" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingLeft">@dimen/team_name_padding_left</item>
+        <item name="android:paddingRight">@dimen/team_name_padding_right</item>
+        <item name="android:paddingBottom">@dimen/team_name_padding_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/team_name_text_size</item>
+    </style>
+
+    <!-- Simple Text-->
+    <style name="SimpleText" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">@dimen/center_text_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/simple_text_margin_top</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/simple_text</item>
+        <item name="android:textSize">@dimen/simple_text_size</item>
     </style>
 
     <!-- Left team text. -->
     <style name="LeftTeamText" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingBottom">2dp</item>
-        <item name="android:layout_marginTop">2dp</item>
-        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:paddingLeft">@dimen/team_text_padding_left</item>
+        <item name="android:paddingRight">@dimen/team_text_padding_right</item>
+        <item name="android:paddingBottom">@dimen/team_text_padding_bottom</item>
+        <item name="android:layout_marginTop">@dimen/team_text_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/team_text_margin_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/team_text_size</item>
     </style>
 
     <!-- Right team text. -->
     <style name="RightTeamText" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingBottom">2dp</item>
-        <item name="android:layout_marginTop">2dp</item>
-        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:paddingLeft">@dimen/team_text_padding_left</item>
+        <item name="android:paddingRight">@dimen/team_text_padding_right</item>
+        <item name="android:paddingBottom">@dimen/team_text_padding_bottom</item>
+        <item name="android:layout_marginTop">@dimen/team_text_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/team_text_margin_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/team_text_size</item>
+    </style>
+
+    <!-- Tap Text-->
+    <style name="TapText" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/tap_text_paddingLeft</item>
+        <item name="android:paddingRight">@dimen/tap_text_paddingRight</item>
+        <item name="android:layout_marginTop">@dimen/tap_text_margin_top</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/simple_text</item>
+        <item name="android:textSize">@dimen/tap_text_size</item>
     </style>
 
     <!-- Left team small button -->
     <style name="LeftTeamSmallButton" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">34dp</item>
-        <item name="android:layout_height">34dp</item>
-        <item name="android:layout_marginTop">4dp</item>
-        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_width">@dimen/small_button_width</item>
+        <item name="android:layout_height">@dimen/small_button_height</item>
+        <item name="android:layout_marginTop">@dimen/small_button_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/small_button_margin_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:text">0</item>
+        <item name="android:text">@string/zero</item>
     </style>
 
     <!-- Right team small button -->
     <style name="RightTeamSmallButton" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">34dp</item>
-        <item name="android:layout_height">34dp</item>
-        <item name="android:layout_marginTop">4dp</item>
-        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_width">@dimen/small_button_width</item>
+        <item name="android:layout_height">@dimen/small_button_height</item>
+        <item name="android:layout_marginTop">@dimen/small_button_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/small_button_margin_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:text">0</item>
+        <item name="android:text">@string/zero</item>
     </style>
 
     <!-- Left Team Corner -->
     <style name="LeftTeamCorner" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_margin">@dimen/corner_margin</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:text">Corner\nKick</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:text">@string/corner_kick_text_on_button</item>
+        <item name="android:textSize">@dimen/corner_text_size</item>
     </style>
 
     <!-- Right Team Corner -->
     <style name="RightTeamCorner" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_margin">@dimen/corner_margin</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:text">Corner\nKick</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:text">@string/corner_kick_text_on_button</item>
+        <item name="android:textSize">@dimen/corner_text_size</item>
     </style>
 
     <!-- Left Team Goal -->
     <style name="LeftTeamGoal" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_width">@dimen/goal_button_width</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">@dimen/goal_padding_top_bottom</item>
+        <item name="android:paddingTop">@dimen/goal_padding_top_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:text">G\no\na\nl</item>
+        <item name="android:text">@string/goal_text_on_button</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/goal_button_text_size</item>
     </style>
 
     <!-- Right Team Goal -->
     <style name="RightTeamGoal" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_width">@dimen/goal_button_width</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">@dimen/goal_padding_top_bottom</item>
+        <item name="android:paddingTop">@dimen/goal_padding_top_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:text">G\no\na\nl</item>
+        <item name="android:text">@string/goal_text_on_button</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/goal_button_text_size</item>
     </style>
 
     <!-- Left Team Penalty -->
     <style name="LeftTeamPenalty" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_width">@dimen/penalty_button_width</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">@dimen/penalty_padding_top_bottom</item>
+        <item name="android:paddingTop">@dimen/penalty_padding_top_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:text">P\ne\nn\na\nl\nt\ny</item>
+        <item name="android:text">@string/penalty_text_on_button</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/penalty_button_text_size</item>
     </style>
 
     <!-- Right Team Penalty -->
     <style name="RightTeamPenalty" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_width">@dimen/penalty_button_width</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">@dimen/penalty_padding_top_bottom</item>
+        <item name="android:paddingTop">@dimen/penalty_padding_top_bottom</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:text">P\ne\nn\na\nl\nt\ny</item>
+        <item name="android:text">@string/penalty_text_on_button</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/penalty_button_text_size</item>
     </style>
-
 
 </resources>

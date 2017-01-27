@@ -127,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
 
         reset = (Button) findViewById(R.id.reset);
         secondHalf = (Button) findViewById(R.id.second_Half);
-
     }
 
     public void startScoreCount(View view) {
@@ -263,76 +262,74 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void leftGoal(View view) {
-            int num = Integer.valueOf(goalTeamRightText.getText().toString()) + 1;
-            goalTeamRightText.setText(""+num);
+        increaseTextValue(goalTeamRightText);
     }
 
     public void rightGoal(View view) {
-            int num = Integer.valueOf(goalTeamLeftText.getText().toString()) + 1;
-            goalTeamLeftText.setText(""+num);
+        increaseTextValue(goalTeamLeftText);
     }
 
     public void leftPenalty(View view) {
-            int num = Integer.valueOf(penaltyTeamRightText.getText().toString()) + 1;
-            penaltyTeamRightText.setText(""+num);
-            leftFouls(view);
+        increaseTextValue(penaltyTeamRightText);
+        leftFouls(view);
     }
 
     public void rightPenalty(View view) {
-            int num = Integer.valueOf(penaltyTeamLeftText.getText().toString()) + 1;
-            penaltyTeamLeftText.setText(""+num);
-            rightFouls(view);
+        increaseTextValue(penaltyTeamLeftText);
+        rightFouls(view);
     }
 
     public void leftCorner(View view) {
-            int num = Integer.valueOf(cornerKickTeamRightText.getText().toString()) + 1;
-            cornerKickTeamRightText.setText(""+num);
+        increaseTextValue(cornerKickTeamRightText);
     }
 
     public void rightCorner(View view) {
-            int num = Integer.valueOf(cornerKickTeamLeftText.getText().toString()) + 1;
-            cornerKickTeamLeftText.setText(""+num);
+        increaseTextValue(cornerKickTeamLeftText);
     }
+
+    private void increaseTextValue(TextView view){
+        int num = Integer.valueOf(view.getText().toString()) + 1;
+        String number = "" + num;
+        view.setText(number);
+    }
+
 
     public void leftFouls(View view) {
-            int num = Integer.valueOf(foulsTeamLeft.getText().toString()) + 1;
-            foulsTeamLeft.setText(""+num);
+        increaseButtonValue(foulsTeamLeft);
     }
 
-
     public void rightFouls(View view) {
-            int num = Integer.valueOf(foulsTeamRight.getText().toString()) + 1;
-            foulsTeamRight.setText(""+num);
+        increaseButtonValue(foulsTeamRight);
     }
 
     public void leftThrowIn(View view) {
-            int num = Integer.valueOf(throwInTeamLeft.getText().toString()) + 1;
-            throwInTeamLeft.setText(""+num);
+        increaseButtonValue(throwInTeamLeft);
     }
 
     public void rightThrowIn(View view) {
-            int num = Integer.valueOf(throwInTeamRight.getText().toString()) + 1;
-            throwInTeamRight.setText(""+num);
+        increaseButtonValue(throwInTeamRight);
     }
 
     public void leftYellowCard(View view) {
-            int num = Integer.valueOf(yellowCardTeamLeft.getText().toString()) + 1;
-            yellowCardTeamLeft.setText(""+num);
+        increaseButtonValue(yellowCardTeamLeft);
     }
 
     public void rightYellowCard(View view) {
-            int num = Integer.valueOf(yellowCardTeamRight.getText().toString()) + 1;
-            yellowCardTeamRight.setText(""+num);
+        increaseButtonValue(yellowCardTeamRight);
     }
 
     public void leftRedCard(View view) {
-            int num = Integer.valueOf(redCardTeamLeft.getText().toString()) + 1;
-            redCardTeamLeft.setText(""+num);
+        increaseButtonValue(redCardTeamLeft);
     }
 
     public void rightRedCard(View view) {
-            int num = Integer.valueOf(redCardTeamRight.getText().toString()) + 1;
-            redCardTeamRight.setText(""+num);
+        increaseButtonValue(redCardTeamRight);
+    }
+
+    private void increaseButtonValue(TextView view){
+        int num = Integer.valueOf(view.getText().toString()) + 1;
+        String number = "" + num;
+        view.setText(number);
     }
 
     public void reset(View view) {
@@ -344,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
         startScoreCount.setVisibility((View.VISIBLE));
 
         playedHalf.setVisibility(View.GONE);
-        playedHalf.setText("First Half");
+        playedHalf.setText(R.string.first_half);
 
         teamText.setVisibility(View.GONE);
         teamLeftNameText.setVisibility(View.GONE);
@@ -390,9 +387,9 @@ public class MainActivity extends AppCompatActivity {
     private void resetText(TextView viewOne, TextView viewTwo){
 
         viewOne.setVisibility(View.GONE);
-        viewOne.setText("0");
+        viewOne.setText(R.string.zero);
         viewTwo.setVisibility(View.GONE);
-        viewTwo.setText("0");
+        viewTwo.setText(R.string.zero);
 
     }
 
@@ -402,8 +399,8 @@ public class MainActivity extends AppCompatActivity {
         viewTwo.setVisibility(View.GONE);
 
         if(resetText){
-            viewTwo.setText("0");
-            viewOne.setText("0");
+            viewTwo.setText(R.string.zero);
+            viewOne.setText(R.string.zero);
         }
 
     }

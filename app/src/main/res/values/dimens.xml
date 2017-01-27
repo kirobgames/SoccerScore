@@ -6,22 +6,86 @@
     <dimen name="button_width">48dp</dimen>
     <dimen name="button_height">48dp</dimen>
 
+    <!--Edit Text-->
     <dimen name="edit_text_width">240dp</dimen>
     <dimen name="edit_text_padding">8dp</dimen>
     <dimen name="edit_text_team_right_margin_top">40dp</dimen>
 
+    <!--Start Button-->
     <dimen name="start_button_margin_top">56dp</dimen>
     <dimen name="start_button_padding">8dp</dimen>
+    <dimen name="start_button_text_size">20sp</dimen>
 
+    <!-- Half Text-->
+    <dimen name="half_text_size">20sp</dimen>
+    <dimen name="half_text_margin_bottom">2dp</dimen>
+    <dimen name="half_text_margin_top">2dp</dimen>
+    <dimen name="half_text_padding_bottom">4dp</dimen>
+
+    <!--Team Name Text-->
+    <dimen name="team_name_text_size">24sp</dimen>
+    <dimen name="team_name_padding_bottom">4dp</dimen>
+    <dimen name="team_name_padding_right">8dp</dimen>
+    <dimen name="team_name_padding_left">8dp</dimen>
+
+    <!--Team Text-->
+    <dimen name="text_team_size">24sp</dimen>
+    <dimen name="text_team_padding_bottom">4dp</dimen>
+
+    <!-- Center Text-->
+    <dimen name="center_text_width">140dp</dimen>
+
+    <!--Simple Center Text-->
+    <dimen name="simple_text_size">20dp</dimen>
+    <dimen name="simple_text_margin_top">3dp</dimen>
+
+    <!--Simple Left Right Text-->
+    <dimen name="team_text_size">20sp</dimen>
+    <dimen name="team_text_margin_bottom">2dp</dimen>
+    <dimen name="team_text_margin_top">2dp</dimen>
+    <dimen name="team_text_padding_bottom">2dp</dimen>
+    <dimen name="team_text_padding_left">8dp</dimen>
+    <dimen name="team_text_padding_right">8dp</dimen>
+
+    <!--Tap Text-->
+    <dimen name="tap_text_size">20sp</dimen>
+    <dimen name="tap_text_margin_top">4dp</dimen>
+    <dimen name="tap_text_paddingRight">8dp</dimen>
+    <dimen name="tap_text_paddingLeft">8dp</dimen>
+
+    <!--Small Button-->
+    <dimen name="small_button_width">34dp</dimen>
+    <dimen name="small_button_height">34dp</dimen>
+    <dimen name="small_button_margin_top">4dp</dimen>
+    <dimen name="small_button_margin_bottom">4dp</dimen>
+
+    <!--Corner Button-->
+    <dimen name="corner_margin">8dp</dimen>
+    <dimen name="corner_text_size">16sp</dimen>
+
+    <!--Goal Button-->
+    <dimen name="goal_button_width">48dp</dimen>
+    <dimen name="goal_button_text_size">16sp</dimen>
+    <dimen name="goal_padding_top_bottom">8dp</dimen>
+    <dimen name="left_goal_margin_left">8dp</dimen>
+    <dimen name="right_goal_margin_right">8dp</dimen>
+
+
+    <!--Penalty Button-->
+    <dimen name="penalty_button_width">48dp</dimen>
+    <dimen name="penalty_button_text_size">16sp</dimen>
+    <dimen name="penalty_padding_top_bottom">8dp</dimen>
+    <dimen name="left_penalty_margin_left">34dp</dimen>
+    <dimen name="right_penalty_margin_right">34dp</dimen>
+
+    <!--Reset Button-->
     <dimen name="reset_button_padding">8dp</dimen>
     <dimen name="reset_button_margin_end">8dp</dimen>
     <dimen name="reset_button_margin_right">8dp</dimen>
 
+    <!--Second Half Button-->
     <dimen name="second_half_button_padding">8dp</dimen>
     <dimen name="second_half_button_margin_start">8dp</dimen>
     <dimen name="second_half_button_margin_left">8dp</dimen>
-
-    <dimen name="left_penalty_margin_left">34dp</dimen>
-    <dimen name="right_penalty_margin_right">34dp</dimen>
 
 </resources>
