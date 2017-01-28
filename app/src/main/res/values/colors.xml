@@ -3,4 +3,25 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="leftTeamButtonStroke">#FFC62828</color>
+    <color name="leftTeamButtonLightColor">#F44336</color>
+    <color name="leftTeamButtonDarkColor">#E57373</color>
+
+    <color name="rightTeamButtonStroke">#FF1565C0</color>
+    <color name="rightTeamButtonLightColor">#64B5F6</color>
+    <color name="rightTeamButtonDarkColor">#2196F3</color>
+
+    <color name="simpleButtonStroke">#FF2E7D82</color>
+    <color name="simpleButtonLightColor">#81C784</color>
+    <color name="simpleButtonDarkColor">#4CAF50</color>
+
+    <color name="simpleTextStroke">#FF000000</color>
+    <color name="simpleTextSolid">#ECEFF1</color>
+
+    <color name="teamLeftTextStroke">#FFC62828</color>
+    <color name="teamLeftTextSolid">#E57373</color>
+
+    <color name="teamRightTextStroke">#FF1565C0</color>
+    <color name="teamRightTextSolid">#64B5F6</color>
 </resources>

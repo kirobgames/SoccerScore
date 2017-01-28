@@ -2,13 +2,13 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
 
     <stroke
-        android:width="2dp"
-        android:color="#FFC62828" />
+        android:width="@dimen/LeftTeamTextStrokeWidth"
+        android:color="@color/teamLeftTextStroke" />
 
     <corners
-        android:radius="8dp" />
+        android:radius="@dimen/LeftTeamTextCorner" />
 
     <solid
-        android:color="#E57373" />
+        android:color="@color/teamLeftTextSolid" />
 
 </shape>

@@ -88,4 +88,34 @@
     <dimen name="second_half_button_margin_start">8dp</dimen>
     <dimen name="second_half_button_margin_left">8dp</dimen>
 
+    <!-- Left Team Buttons Shape-->
+    <dimen name="LeftTeamButtonStrokeWidth">1dp</dimen>
+    <dimen name="LeftTeamButtonStrokeWidthPress">2dp</dimen>
+    <dimen name="LeftTeamButtonCorners">8dp</dimen>
+
+    <!-- Right Team Buttons Shape-->
+    <dimen name="RightTeamButtonStrokeWidth">1dp</dimen>
+    <dimen name="RightTeamButtonStrokeWidthPress">2dp</dimen>
+    <dimen name="RightTeamButtonCorners">8dp</dimen>
+
+    <!-- Simple Buttons Shape-->
+    <dimen name="SimpleButtonStrokeWidth">1dp</dimen>
+    <dimen name="SimpleButtonStrokeCorner">1dp</dimen>
+    <dimen name="SimpleButtonStrokeWidthPress">2dp</dimen>
+    <dimen name="SimpleButtonCorners">8dp</dimen>
+
+    <!-- Simple Text Shape-->
+    <dimen name="SimpleTextWidth">1dp</dimen>
+    <dimen name="SimpleTextCorner">8dp</dimen>
+
+    <!-- Left Team Text Shape-->
+    <dimen name="LeftTeamTextWidth">2dp</dimen>
+    <dimen name="LeftTeamTextCorner">8dp</dimen>
+    <dimen name="LeftTeamTextStrokeWidth">2dp</dimen>
+
+    <!-- Right Team Text Shape-->
+    <dimen name="RightTeamTextWidth">2dp</dimen>
+    <dimen name="RightTeamTextCorner">8dp</dimen>
+
+
 </resources>
